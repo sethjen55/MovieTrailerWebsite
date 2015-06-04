@@ -1,6 +1,8 @@
 import fresh_tomatoes
 import media
 
+# Builds the instance for each class Movie
+# Passes (Movie title, Movie Description, Movie Poster image, YouTube location of each trailer, Directors, Rating (with year made and genre, Actors)
 matrix = media.Movie("The Matrix",
                      "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
                      "https://i.ytimg.com/vi/qEXv-rVWAu8/movieposter.jpg",
@@ -49,6 +51,8 @@ americanSniper = media.Movie("American Sniper",
                      "R (2014) | Action, Biography, Thriller",
                      "Bradley Cooper, Selina Miller, Kyle Gallner...")
 
-
+# Generates a list of the movie instances that will get passed to the web page generator.
 movies = [matrix, matrix2, matrix3, edgeOfTomorrow, guardians, americanSniper]
+
+# Calls the open_movies_page() funtion in fresh_tomatoes.py and passes the list of movie references to display on the web page.
 fresh_tomatoes.open_movies_page(movies)
